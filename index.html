@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Shop</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <h2 class="title">Book Shop</h2>
+        <ul class="menu">
+          <li class="active">Books</li>
+          <li>AudioBooks</li>
+          <li>Gifts</li>
+          <li>About</li>
+        </ul>
+
+        <ul class="menu_icons">
+            <li><i class="bi bi-sun" id="toggleButton" onclick="toggleButton()"></i></li>
+          <li><i class="bi bi-person"></i></li>
+          <li><i class="bi bi-search"></i></li>
+          <li class="basket_icon" onclick="toggleModal()">
+            <i class="bi bi-bag"></i> <span class="basket_count">1</span>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- slider -->
+
+    <section class="slider">
+      <div id="carouselBookSlider" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/books/slide1.png" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="images/books/slide2.png" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="images/books/slide3.png" class="d-block w-100" alt="..." />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselBookSlider"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselBookSlider"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- products -->
+
+    <section class="store mt-5">
+      <div class="filter_background"></div>
+      <ul class="filter">
+         <li class="active">Tümü</li>
+        <li>Tarih</li>
+        <li>Roman</li>
+        <li>Finans</li>
+        <li>Çocuk</li>
+        <li>Kişisel Gelişim</li>
+        <li>Bilim</li>
+      </ul>
+      <div class="row book_list">
+        <div class="col-5 offset-2 my-5">
+          <div class="row book_card">
+            <div class="col-6">
+              <img
+                src="images/books/nutuk.jpg"
+                alt=""
+                class="img-fluid shadow"
+                width="258px"
+                height="400px" />
+            </div>
+            <div class="col-6 d-flex flex-column justify-content-center gap-4">
+              <div class="book_detail">
+                <span class="fos gray fs-5">Mustafa Kemal Ataturk</span><br />
+                <span class="fs-4 fw-bold">Nutuk</span><br />
+                <span class="book_star_rate">
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <span class="gray">1938 reviews</span>
+                </span>
+                <p class="book_desc fos gray">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Molestiae deserun
+                </p>
+                <div>
+                  <span class="black fw-bold fs-5 me-2">45 TL</span>
+                  <span class="fs-5 fw-bold old_price">65 TL</span>
+                </div>
+                <button class="btn_purple">Sepete Ekle</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-5 my-5">
+          <div class="row book_card">
+            <div class="col-6">
+              <img
+                src="images/books/nutuk.jpg"
+                alt=""
+                class="img-fluid shadow"
+                width="258px"
+                height="400px"
+              />
+            </div>
+            <div class="col-6 d-flex flex-column justify-content-center gap-4">
+              <div class="book_detail">
+                <span class="fos gray fs-5">Mustafa Kemal Ataturk</span><br />
+                <span class="fs-4 fw-bold">Nutuk</span><br />
+                <span class="book_star_rate">
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <span class="gray">1938 reviews</span>
+                </span>
+                <p class="book_desc fos gray">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Molestiae deserun
+                </p>
+                <div>
+                  <span class="black fw-bold fs-5 me-2">45 TL</span>
+                  <span class="fs-5 fw-bold old_price">65 TL</span>
+                </div>
+                <button class="btn_purple">Sepete Ekle</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-5 offset-6 my-5">
+          <div class="row book_card">
+            <div class="col-6">
+              <img
+                src="images/books/nutuk.jpg"
+                alt=""
+                class="img-fluid shadow"
+                width="258px"
+                height="400px"
+              />
+            </div>
+            <div class="col-6 d-flex flex-column justify-content-center gap-4">
+              <div class="book_detail">
+                <span class="fos gray fs-5">Mustafa Kemal Ataturk</span><br />
+                <span class="fs-4 fw-bold">Nutuk</span><br />
+                <span class="book_star_rate">
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <span class="gray">1938 reviews</span>
+                </span>
+                <p class="book_desc fos gray">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Molestiae deserun
+                </p>
+                <div>
+                  <span class="black fw-bold fs-5 me-2">45 TL</span>
+                  <span class="fs-5 fw-bold old_price">65 TL</span>
+                </div>
+                <button class="btn_purple">Sepete Ekle</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-5 my-5">
+          <div class="row book_card">
+            <div class="col-6">
+              <img
+                src="images/books/nutuk.jpg"
+                alt=""
+                class="img-fluid shadow"
+                width="258px"
+                height="400px"
+              />
+            </div>
+            <div class="col-6 d-flex flex-column justify-content-center gap-4">
+              <div class="book_detail">
+                <span class="fos gray fs-5">Mustafa Kemal Ataturk</span><br />
+                <span class="fs-4 fw-bold">Nutuk</span><br />
+                <span class="book_star_rate">
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <span class="gray">1938 reviews</span>
+                </span>
+                <p class="book_desc fos gray">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Molestiae deserun
+                </p>
+                <div>
+                  <span class="black fw-bold fs-5 me-2">45 TL</span>
+                  <span class="fs-5 fw-bold old_price">65 TL</span>
+                </div>
+                <button class="btn_purple">Sepete Ekle</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="basket_modal">
+      <div class="basket_items">
+        <i class="bi bi-x" onclick="toggleModal()"></i>
+        <h2 class="basket_title">Sepetteki Ürünler</h2>
+        <ul class="basket_list">
+          <!-- <li class="basket_item">
+            <img src="images/books/nutuk.jpg" alt="" width="100" height="100" />
+            <div class="basket_item-info">
+              <h3 class="book_name">Nutuk</h3>
+              <span class="book_price">45 TL</span><br />
+              <span class="book_remove">Sepetten Kaldır</span>
+            </div> 
+            <div class="book_count">
+              <span class="decrease">-</span>
+              <span class="mx-2">2</span>
+              <span class="increase">-</span>
+            </div>
+          </li> -->
+        </ul>
+        <div class="basket_total">
+            <span>Toplam: 100 TL</span>
+            <button class="btn_purple btnCheck">Onayla</button>
+
+        </div>
+      </div>
+    </div>
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="main.js">
+    </script>
+
+  </body>
+</html>
