@@ -1,6 +1,7 @@
 
 <h2>Book Shop</h2>
 
+It is a website created using the Bootstrap library.
 This Website is built for following purpose: <br>
 
 Adding and managing books. <br>
@@ -16,8 +17,8 @@ Increase Books Amount. <br>
 HTML <br>
 CSS <br>
 Javascript <br>
-BootStrap <br>
+
 
 <h3>Screen Gif</h3>
 
-![Uploading book shop.gif…]()
+![book shop](https://github.com/begpan/bookShop/assets/145170180/9cff154e-29cf-4043-b7f8-d90574146e8f)
